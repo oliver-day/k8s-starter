@@ -35,6 +35,9 @@ spec:
           imagePullPolicy: Always
           name: synergychat-web
           resources: {}
+          envFrom:
+            - configMapRef:
+                name: synergychat-web-configmap
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
